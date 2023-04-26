@@ -32,12 +32,6 @@ td,th{
     padding: 8px;
 }
 
-td[colspan], td[rowspan]{
-    background-color: rgb(38, 112, 112);
-    text-align: center;
-    font-weight: 700;
-}
-
 tr:nth-child(even){
     background-color: #dddddd;
 }
@@ -50,4 +44,39 @@ td{
     text-align: left;
 }
 
+td[colspan], td[rowspan]{
+    background-color: #e5f50b;
+    text-align: center;
+    font-weight: 700;
+}
+
 /* tabela */
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape > div{
+    display: flex;
+}
+.rodape div form{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.rodape div form input[type=email],input[type=password]{
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 0 auto 1.5% auto;
+}
+
+.rodape div form input[type=checkbox]{
+    margin: 2% auto;
+}
+
+.rodape div form select{
+    display: block;
+    margin: 0 auto 2% auto;
+}
