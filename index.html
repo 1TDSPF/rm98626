@@ -7,6 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
+
+    <!-- <script>
+        //COMENTÁRIO DE LINHA
+        /*
+            COMENTÁRIO DE BLOCO
+        */
+
+        //Declarando variáveis com a palavra reservada var.
+        var nr1 = 10;
+        var nr2 = 5;
+
+        //Realizando a soma dos valores direto!
+        console.log(nr1+nr2);
+
+        //Declarando variáveis com a palavra reservada var.
+        var nr3 = "10";
+        var nr4 = "5";
+
+        //Realizando a soma dos valores direto!
+        console.log(nr3+nr4);
+        //Utilizando uma função interna de parseamento
+        console.log( parseInt(nr3) + parseInt(nr4));
+
+        //Realizando a subtração dos valores direto!
+        console.log("RESULTADO : " + (parseInt(nr3) - parseInt(nr4)));
+
+    </script> -->
+
+    <script src="./js/script.js"></script>
+
 </head>
 
 <body>
@@ -57,15 +87,15 @@
             <a href="#"><img src="./img/social-3.png" alt="Logo twitter"></a> -->
         </nav>
         <div>
-            <form action="index.html" method="POST" onsubmit="return true">
+            <form action="index.html" method="POST" onsubmit="return false">
                 <fieldset>
                     <legend>Login</legend>
                     <div>
-                        <label for="idEmail">Email</label>
+                        <label class="lbl-txt" for="idEmail">Email</label>
                         <input type="email" name="txtEmail" id="idEmail" placeholder="Email" required>
                     </div>
                     <div>
-                        <label for="idPass">Senha</label>
+                        <label class="lbl-txt" for="idPass">Senha</label>
                         <input type="password" name="txtPass" id="idPass" placeholder="Pass"
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             title="Precisa conter no mínimo 8 caractéres e um em maiusculo e pelo menos um em minusculo.">
@@ -85,14 +115,47 @@
                         </select>
                     </fieldset>
                     </div>
-                    <div>
-                        <button type="submit">Login</button>
+                    <div class="btn">
+                        <button onclick="document.write('Olá Mundo!')" type="submit">Login</button>
                         <button type="reset">Limpar</button>
                     </div>
                 </fieldset>
             </form>
         </div>
     </footer>
+
+
+    <!-- <script>
+        //COMENTÁRIO DE LINHA
+        /*
+            COMENTÁRIO DE BLOCO
+        */
+
+        //Declarando variáveis com a palavra reservada var.
+        var nr1 = 10;
+        var nr2 = 5;
+
+        //Realizando a soma dos valores direto!
+        console.log(nr1+nr2);
+
+        //Declarando variáveis com a palavra reservada var.
+        var nr3 = "10";
+        var nr4 = "5";
+
+        //Realizando a soma dos valores direto!
+        console.log(nr3+nr4);
+        //Utilizando uma função interna de parseamento
+        console.log( parseInt(nr3) + parseInt(nr4));
+        //Realizando a subtração dos valores direto!
+        console.log("RESULTADO DA SUBTRAÇÃO: " + (parseInt(nr3) - parseInt(nr4)));
+
+        //Realizando a divisão dos valores direto!
+        console.log("RESULTADO DA DIVISÃO: " + (parseInt(nr3) / parseInt(nr4)));
+
+        //Realizando o processo para recuperar o resto da divisão.
+        console.log(`RESTO DA DIVISÃO DE ${nr3} POR ${nr4} = ${(parseInt(nr3) % parseInt(nr4))}`);
+
+    </script> -->
 
 </body>
 
