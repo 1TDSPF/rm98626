@@ -102,11 +102,23 @@
 // });
 
 //convertendo HTMLCollection em Arrays
-const imgElements = document.getElementsByTagName("img");
+// const imgElements = document.getElementsByTagName("img");
 
-const imgElementsArray = [...imgElements];
-console.log(imgElementsArray)
-imgElementsArray.forEach((img)=>{
-    img.setAttribute("width", "5%")
+// const imgElementsArray = [...imgElements];
+// console.log(imgElementsArray)
+// imgElementsArray.forEach((img)=>{
+//     img.setAttribute("width", "5%")
+// });
+
+//recupere uma collections de elementos do tipo( a )
+//identifique aqueles que são pertencentes somente ao cabeçalho e add o atributo style com o a propriedade background-color: #ff0000
+
+const aElements = [...document.getElementsByTagName("a")];
+console.log(aElements);
+
+aElements.forEach((a)=>{
+    let textoDoA = a.textContent;
+    if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
+        a.setAttribute("style", `background-color: #ff0000`)
+    }
 });
-
