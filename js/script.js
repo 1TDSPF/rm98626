@@ -84,3 +84,29 @@
 // frutas.splice(indice, 2)
 // console.log("item que foi localizado no array: " + frutas[indice]);
 // console.table(frutas)
+
+// let nr1 = [1,2,3,4,5];
+// let nr2 = [6,7,8,9,10];
+// console.log(nr1);
+// console.log(nr2);
+
+// //concatenando arrays
+// let nr3 = [...nr1, ...nr2];
+// console.log("novo array: " + nr3);
+
+// //imprimindo o array concatenando com o operador spread( ... )
+// //imprimindo com foreach
+
+// nr3.forEach((nr)=>{
+//     console.log("item do novo array: " + nr)
+// });
+
+//convertendo HTMLCollection em Arrays
+const imgElements = document.getElementsByTagName("img");
+
+const imgElementsArray = [...imgElements];
+console.log(imgElementsArray)
+imgElementsArray.forEach((img)=>{
+    img.setAttribute("width", "5%")
+});
+
