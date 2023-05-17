@@ -21,15 +21,16 @@ console.log(listaDeUsuarios);
 
 addEventListener("click", (evt)=>{
     
+    const inputEmail = document.querySelector("#idEmail");
+    const inputPass = document.querySelector("#idPass");
+
+    
     if(evt.target.id == "btnSubmit"){
-        
-        const inputEmail = document.querySelector("#idEmail");
-        const inputPass = document.querySelector("#idPass");
 
         try {
             
             listaDeUsuarios.forEach((usuario)=>{
-    
+     
                 if(inputEmail.value == usuario.usuarioEmail && inputPass.value == usuario.usuarioSenha){
                     throw "VALIDADO";
                 }
@@ -49,9 +50,13 @@ addEventListener("click", (evt)=>{
             }
             
         }
-
-
-
+    }else if(evt.target.className="fa fa-eye" || "fa fa-eye-slash"){
+        if(inputPass.getAttribute("type") == "password"){
+            inputPass.setAttribute("type", "text");
+            evt.target.setAttribute("class" , "fa fa-eye-slash")
+        }else{
+            inputPass.setAttribute("type", "password")
+        }
 
     }
 });
